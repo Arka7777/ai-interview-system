@@ -1,0 +1,42 @@
+{
+  "36304ab9-0687-4aeb-ba2f-735099eba381": {
+    "role": "software engineer",
+    "experience": "Fresher",
+    "job_description": "We are looking for a motivated Software Engineer to join our development team. The candidate will be responsible for designing, developing, testing, and maintaining software applications.\n\nResponsibilities:\n\nDevelop and maintain applications using Python, Java, or C++.\nWrite clean, maintainable, and efficient code.\nDesign and consume REST APIs.\nWork with relational databases such as MySQL or PostgreSQL.\nDebug and resolve software issues.\nWrite unit tests and perform basic application testing.\nUse Git and GitHub for version control.\nCollaborate with other developers and team members.\nParticipate in code reviews and contribute to technical discussions.\nLearn new technologies and follow software development best practices.\n\nRequired Skills:\n\nGood understanding of programming fundamentals and object-oriented programming.\nKnowledge of Python, Java, or C++.\nUnderstanding of data structures and algorithms.\nBasic knowledge of SQL and relational databases.\nUnderstanding of REST APIs and HTTP methods.\nFamiliarity with Git and GitHub.\nBasic knowledge of software development lifecycle and testing.\nGood problem-solving and analytical skills.",
+    "skills": [
+      "Python",
+      "Java",
+      "C++",
+      "REST API",
+      "MySQL",
+      "PostgreSQL",
+      "SQL",
+      "Git",
+      "GitHub",
+      "Unit Testing",
+      "Data Structures",
+      "Algorithms",
+      "Object-Oriented Programming"
+    ],
+    "tools": [
+      "Python",
+      "Java",
+      "C++",
+      "REST APIs",
+      "MySQL",
+      "PostgreSQL",
+      "Git",
+      "GitHub"
+    ],
+    "experience_requirements": "The role expects an entry\u2011level candidate with a solid grasp of programming fundamentals and basic experience in Python, Java, or C++.",
+    "log": [
+      {
+        "question": "What are the main differences between a list and a tuple in Python, and when would you choose one over the other?",
+        "answer": "list is mutable and tupple is immutable\n",
+        "score": 2,
+        "feedback": "The answer only mentions mutability, missing key differences like syntax, performance, available methods, and typical use cases, so it is incomplete."
+      }
+    ],
+    "status": "in_progress"
+  }
+}

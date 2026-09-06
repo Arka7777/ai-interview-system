@@ -1,0 +1,44 @@
+"""
+AI Interview Preparation & Mock Interview System — Backend (Real LangGraph Version)
+ 
+This version uses an ACTUAL compiled LangGraph StateGraph:
+ 
+    START
+      |
+      |--> analyze_skills        \\
+      |--> analyze_experience     >  PARALLEL fan-out (all 3 run concurrently)
+      |--> analyze_tools         /
+      |
+      v
+    combine_analysis   (fan-in join — waits for all 3 parallel branches)
+      |
+      v
+    generate_questions            SEQUENTIAL
+      |
+      v
+    ask_question  <---------------------------\\
+      |                                        |   ITERATIVE LOOP
+      v                                        |
+    evaluate_answer                            |
+      |                                        |
+      +-- score < 7, follow-ups left --> follow_up  ---/
+      |                                        |
+      +-- score >= 7 or follow-ups used -----> next_question --/
+      |                                                CONDITIONAL EDGE
+      +-- no questions left ------------------> generate_report
+                                                      |
+                                                      v
+                                                     END
+ 
+Interrupt/resume: `ask_question` calls `interrupt()`, which pauses the graph
+mid-execution and returns the question to the API caller. The next API call
+resumes the SAME graph run with `Command(resume=answer)`. This is a real
+pause of the graph, not a simulated one via separate function calls.
+ 
+Storage:
+  - LangGraph's own execution state is kept by an in-memory checkpointer
+    (MemorySaver), keyed by interview_id as the "thread_id".
+  - A human-readable copy (role, JD analysis, full Q&A log, final report) is
+    also written to interview.json, since that's what you'll actually want
+    to open and read/debug.
+"""

@@ -8,7 +8,7 @@ Run this with:       streamlit run app.py
 import requests
 import streamlit as st
 
-API_URL = "http://127.0.0.1:8000"
+API_URL = "https://ai-interview-system-backend-0hoo.onrender.com"
 
 st.set_page_config(page_title="AI Mock Interview", page_icon="🧑‍💼", layout="centered")
 
